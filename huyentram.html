@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trâm nè</title>
+  <style>
+    body {
+      background: #111;
+      color: #fff;
+      font-size: 18px;
+      font-family: 'Courier New', Courier, monospace;
+      height: 100vh;
+      padding: 20px;
+      line-height: 1.6;
+      text-align: left;
+      position: relative;
+      overflow: auto;
+    }
+
+    .text {
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      max-width: 100%;
+      min-height: 40vh; /* để thấy vị trí khi chưa có chữ */
+    }
+
+    /* Chữ START */
+    .start-btn {
+      position: fixed;
+      left: 50%;
+      bottom: 10%;
+      transform: translateX(-50%) scale(0.7);
+      font-size: 26px;
+      font-weight: bold;
+      color: #0ff;
+      opacity: 0;
+      cursor: pointer;
+      text-shadow: 0 0 6px #0ff, 0 0 12px #0ff;
+      transition: all 0.6s cubic-bezier(.2,.8,.2,1);
+      pointer-events: none;
+    }
+    .start-btn.show {
+      opacity: 1;
+      transform: translateX(-50%) scale(1.15);
+      pointer-events: auto;
+      animation: glowPulse 1.6s infinite;
+    }
+    @keyframes glowPulse {
+      0% { text-shadow: 0 0 6px #0ff, 0 0 12px #0ff; }
+      50% { text-shadow: 0 0 18px #0ff, 0 0 36px #0ff; }
+      100% { text-shadow: 0 0 6px #0ff, 0 0 12px #0ff; }
+    }
+
+    /* debug box (ẩn bình thường) */
+    #debug {
+      display: none;
+      position: fixed;
+      left: 10px;
+      top: 10px;
+      right: 10px;
+      background: rgba(255,0,0,0.12);
+      color: #fff;
+      padding: 8px;
+      border-radius: 6px;
+      font-size: 14px;
+      z-index: 9999;
+      word-break: break-word;
+    }
+  </style>
+</head>
+<body>
+  <div class="text" id="text"></div>
+  <div id="startBtn" class="start-btn">START</div>
+  <div id="debug"></div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      try {
+        // DÙNG NỐI CHUỖI (tương thích hơn trên trình duyệt cũ)
+        var content = "Dear Dam Huyen Tram,\n\n" +
+          "A special day, I bet you will be surprised, happy, and scream haha. Wish you happiness. Happy 20th October..... " +
+          "Let's goooooooooo\n" +
+          "So... are you ready?";
+
+        var textDiv = document.getElementById('text');
+        var startBtn = document.getElementById('startBtn');
+        var debug = document.getElementById('debug');
+        var i = 0;
+
+        // Nếu muốn test nhanh: nếu trình duyệt không chạy, mở debug bằng đặt true
+        var showDebugOnEmpty = false;
+
+        function typeEffect() {
+          if (i < content.length) {
+            textDiv.textContent += content.charAt(i);
+            i++;
+            // tốc độ: 30-50ms ổn cho đọc trên điện thoại
+            setTimeout(typeEffect, 40);
+          } else {
+            // hiện START sau khi xong
+            setTimeout(function () {
+              startBtn.classList.add('show');
+            }, 400);
+          }
+        }
+
+        // Start typing
+        typeEffect();
+
+        // Hành động khi bấm START (thay bằng hành động bạn muốn)
+        startBtn.addEventListener('click', function () {
+          // ví dụ: tới trang khác
+          // window.location.href = 'nextpage.html';
+          alert("Click vào hành tinh, xoay ngang điện thoại, khuyến khích dùng máy tính-đeo headphone <3"); 
+        });
+
+        // nếu sau 1.5s vẫn chưa thấy ký tự nào → show debug hint
+        setTimeout(function () {
+          if (showDebugOnEmpty && textDiv.textContent.trim().length === 0) {
+            debug.style.display = 'block';
+            debug.textContent = 'Chưa có ký tự nào xuất hiện — có thể JS bị lỗi hoặc trình duyệt không hỗ trợ. Thử mở trang bằng Chrome/Firefox trên điện thoại.';
+          }
+        }, 1500);
+
+      } catch (err) {
+        // hiện lỗi để bạn biết (thường là syntax error)
+        var dbg = document.getElementById('debug');
+        dbg.style.display = 'block';
+        dbg.textContent = 'Lỗi JS: ' + (err && err.message ? err.message : String(err));
+      }
+    });
+      startBtn.addEventListener('click', () => {
+  window.location.href = "mhuyentram.html";  
+});
+
+  </script>
+</body>
+</html>

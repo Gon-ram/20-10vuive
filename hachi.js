@@ -84,7 +84,7 @@ const galaxyParameters = {
   outsideColor: new THREE.Color(0x48b8b8),
 };
 
-const defaultHeartImages = Array.from({ length: 6 }, (_, i) => `imagevhl/halinh${i + 1}.jpg`);
+const defaultHeartImages = Array.from({ length: 9 }, (_, i) => `images/thutrang${i + 1}.jpg`);
 
 const heartImages = [
   ...(window.dataCCD?.data?.heartImages || []),
@@ -611,10 +611,10 @@ scene.add(planet);
 
 // ---- TẠO CÁC VÒNG CHỮ QUAY QUANH HÀNH TINH ----
 const ringTexts = [
-  '20-10 vui vẻ',
-  "Xinh gái hơn",
-  "Vui vẻ hơnn",
-  "Nguyễn Vương Hà Linh",
+  'Happy 20/10',
+  "Bớt hài",
+  "Ngo Thi Ha Chi",
+  "Cười nhiều sún răng",
   ...(window.dataCCD && window.dataCCD.data.ringTexts ? window.dataCCD.data.ringTexts : [])
 ];
 
@@ -819,7 +819,7 @@ let galaxyAudio = null;
 
 function preloadGalaxyAudio() {
   const audioSources = [
-   "dendaybenanh.mp3"
+   "phepmau.mp3.mp3"
   ];
 
   const randomIndex = Math.floor(Math.random() * audioSources.length);
