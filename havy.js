@@ -84,7 +84,7 @@ const galaxyParameters = {
   outsideColor: new THREE.Color(0x48b8b8),
 };
 
-const defaultHeartImages = Array.from({ length: 8 }, (_, i) => `imagehc/hc${i + 1}.jpg`);
+const defaultHeartImages = Array.from({ length: 6 }, (_, i) => `imagehv/hv${i + 1}.jpg`);
 
 const heartImages = [
   ...(window.dataCCD?.data?.heartImages || []),
@@ -612,9 +612,9 @@ scene.add(planet);
 // ---- TẠO CÁC VÒNG CHỮ QUAY QUANH HÀNH TINH ----
 const ringTexts = [
   'Happy 20/10',
-  "Bớt hài",
-  "Ngo Thi Ha Chi",
-  "Cười nhiều sún răng",
+  "Yêu bản thân",
+  "Bình yên & Hạnh phúc",
+  "Nguyễn Thị Hà vy",
   ...(window.dataCCD && window.dataCCD.data.ringTexts ? window.dataCCD.data.ringTexts : [])
 ];
 

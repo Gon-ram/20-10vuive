@@ -98,3 +98,34 @@ body {
   font-size: 14px;
 }
 
+/* Responsive cho màn hình nhỏ (điện thoại) */
+@media (max-width: 600px) {
+  body {
+    padding: 0 16px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: none;
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .login-form h2 {
+    font-size: 20px;
+  }
+
+  .login-form input,
+  .login-form button {
+    font-size: 15px;
+    padding: 10px;
+  }
+
+  .login-form button {
+    margin-top: 4px;
+  }
+}
+
+
