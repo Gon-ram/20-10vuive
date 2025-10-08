@@ -614,7 +614,7 @@ const ringTexts = [
   'Happy 20/10',
   "Yêu bản thân",
   "Bình yên & Hạnh phúc",
-  "Nguyễn Thị Hà vy",
+  "Nguyễn Thị Hà Vy",
   ...(window.dataCCD && window.dataCCD.data.ringTexts ? window.dataCCD.data.ringTexts : [])
 ];
 
