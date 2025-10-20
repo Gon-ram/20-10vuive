@@ -14,7 +14,7 @@ const accounts = [
   { username: "Hà Linh", password: "0505", page: "dhalinh.html" },
   { username: "Hải Yến", password: "2302", page: "haiyen.html" },
   { username: "Anh Thư", password: "0812", page: "anhthu.html" },
-  { username: "Lê Na", password: "0310", page: "lena.html" },
+  { username: "Lê Na", password: "0310", page: "na.html" },
   { username: "Thảo My", password: "0304", page: "thmy.html" },
   { username: "Huyền Trâm", password: "1001", page: "huyentram.html" },
   { username: "Hà Vy", password: "2609", page: "havy.html" },
