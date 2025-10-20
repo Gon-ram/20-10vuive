@@ -1,7 +1,7 @@
 // script.js
 // Danh sách 18 tài khoản + ánh xạ username -> file HTML riêng
 const accounts = [
-  { username: "Ngọc Bảo",  password: "1208",  page: "ngocbao.html"  },
+  { username: "Ngọc Bảo",  password: "1208",  page: "nb.html"  },
   { username: "Trang Linh",  password: "2411",  page: "a.html"  },
   { username: "Vân Anh",  password: "0707",  page: "vananh.html"  },
   { username: "Thu Trang",  password: "1409",  page: "thutrang.html"  },
