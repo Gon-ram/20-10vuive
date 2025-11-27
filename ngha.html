@@ -136,5 +136,24 @@
 });
 
   </script>
+  <script>
+  // Lấy số lần truy cập từ localStorage
+  let visits = localStorage.getItem("visits") || 0;
+  visits++;
+  localStorage.setItem("visits", visits);
+
+  // Nhận diện màn hình tương tự iPhone 7/8
+  const w = screen.width;
+  const h = screen.height;
+  let deviceType = "Không xác định";
+  if ((w === 750 && h === 1334) || (w === 667 && h === 375)) {
+    deviceType = "Màn hình tương tự iPhone 6/6s/7/8 (4.7 inch)";
+  }
+
+  // Chỉ đếm thiết bị iPhone 7/8
+  if (deviceType.includes("iPhone 6/6s/7/8")) {
+    console.log("Thiết bị iPhone 7/8 truy cập lần thứ:", visits);
+  }
+</script>
 </body>
 </html>
