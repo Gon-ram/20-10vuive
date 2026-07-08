@@ -84,7 +84,7 @@ const galaxyParameters = {
   outsideColor: new THREE.Color(0x48b8b8),
 };
 
-const defaultHeartImages = Array.from({ length: 0 }, (_, i) => `imagedhl/hl${i + 1}.jpg`);
+const defaultHeartImages = Array.from({ length: 11 }, (_, i) => `imagebb/hl${i + 1}.jpg`);
 
 const heartImages = [
   ...(window.dataCCD?.data?.heartImages || []),
@@ -819,7 +819,7 @@ let galaxyAudio = null;
 
 function preloadGalaxyAudio() {
   const audioSources = [
-   "khongbuong.mp3"
+   "henemmaisaugaplai.mp3"
   ];
 
   const randomIndex = Math.floor(Math.random() * audioSources.length);
