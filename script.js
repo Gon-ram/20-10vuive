@@ -5,7 +5,7 @@ const accounts = [
    { username: "Như Ngọc",  password: "yeuanhdatnhat1505",  page: "bepbep.html"  },
   { username: "Trang Linh",  password: "2411",  page: "tranglinh.html"  },
   { username: "Vân Anh",  password: "0707",  page: "vananh.html"  },
-  { username: "Tên baby",  password: "matkhaucuaban",  page: "thutrang.html"  },
+  { username: "Tên bạn chọn",  password: "matkhaucuaban",  page: "thutrang.html"  },
   { username: "Ngọc Hà",  password: "2704",  page: "ngha.html"  },
   { username: "Hồng Anh",  password: "1707",  page: "honganh.html"  },
   { username: "Thanh Lam",  password: "1112",  page: "thanhlam.html"  },
