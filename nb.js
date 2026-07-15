@@ -611,10 +611,10 @@ scene.add(planet);
 
 // ---- TẠO CÁC VÒNG CHỮ QUAY QUANH HÀNH TINH ----
 const ringTexts = [
-  'Happy 20/10',
-  "Hạnh phúc nhoa",
-  "Zui zẻ",
-  "Tran Thi Ngoc Bao",
+  'Tặng em',
+  "My baby",
+  "Happy with me",
+  "Forever",
   ...(window.dataCCD && window.dataCCD.data.ringTexts ? window.dataCCD.data.ringTexts : [])
 ];
 
